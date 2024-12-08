@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="max-w-md mx-auto text-center">
+    <div class="bg-spotify-gray rounded-lg p-8 shadow-xl">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 mx-auto text-spotify-green mb-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        
+        <h1 class="text-3xl font-bold mb-4 text-spotify-green">Playlist Forked!</h1>
+        <p class="text-gray-300 mb-6">Your new playlist "{{ playlist_name }}" has been created successfully.</p>
+        
+        <div class="space-y-4">
+            <a 
+                href="{{ playlist_url }}" 
+                target="_blank" 
+                class="w-full inline-block bg-spotify-green text-black py-3 rounded-full hover:bg-green-500 transition duration-300 font-bold"
+            >
+                Open in Spotify
+            </a>
+            
+            <a 
+                href="{{ url_for('home') }}" 
+                class="w-full inline-block border border-spotify-green text-spotify-green py-3 rounded-full hover:bg-spotify-green/10 transition duration-300"
+            >
+                Fork Another Playlist
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

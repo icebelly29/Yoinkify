@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoinkify - Fork Playlist</title>
+    <link rel="icon" type="image/png" href="static\yoinkfav.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Spotify+Circular&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Spotify Circular', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="bg-spotify-black text-white min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        {% block content %}{% endblock %}
+    </div>
+    
+    <footer class="text-center text-gray-400 mt-8 py-4">
+        <p>&copy; 2024 Yoinkify</p>
+        <p>Made with 💚 by Nikhil</p>
+    </footer>
+</body>
+</html>
